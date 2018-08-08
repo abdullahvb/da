@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>DreamApps, Inc.</title>
+	
+<script language="javascript1.2" type="text/javascript">
+
+//alert(location.hostname);
+
+	if (location.hostname.indexOf("property")>=0){
+		location="/da/portal?id=602000&site=PropertyPro";
+	}else if (location.hostname.indexOf("dreamapps.org")>=0){
+		location="/da/portal?id=100901&site=WS";
+	}else if (location.hostname.indexOf("hotels.")>=0){
+		location="/da/portal?id=300&site=DreamHotels";
+	
+	}else if ((location.hash == "")&&(location.hostname=="bd.dreamapps.com")){
+		location="/da/portal?id=881000&site=DreamSite";
+	}else if ((location.hash == "")&&(location.hostname.indexOf(".dreamapps")>0)&&(location.hostname.indexOf("www.")<0)&&(location.hostname.indexOf("workshop")<0)){
+        	var shortname=location.hostname.substring(0,location.hostname.indexOf(".dreamapps"));
+        	//alert("shortname="+shortname);
+		location="/da/portal?id="+shortname+"&site=ERP";
+
+	}else{
+		location="/da/portal?id=&site=";
+	}
+	
+</script>
+
+</head>
+
+<body >
+<center><h1>DreamApps</h1><p>
+<noscript><h1>You need Javascript 1.2 enabled to browse this site.</h1></noscript>
+</center>
+
+</body>
+</html>
